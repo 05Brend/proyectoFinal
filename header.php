@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="componentes/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/edad.css">
 		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/productos.css">
 		<meta name="author" content="Brenda Dávalos R.">
 		<meta charset="utf-8">
 	</head>

@@ -8,15 +8,8 @@
 	</div>
 
 	<?php
-		$mysqli = new mysqli("127.0.0.1", "root", "", "test");
-
-		if ($mysqli->connect_errno) {
-			echo "<h1>NO SE PUDO CONECTAR A LA BASE DE DATOS";
-			echo "<h3>Error No.: ".$mysqli->connect_errno."</h3>";
-			echo "<h3>Error: ".$mysqli->connect_error."</h3>";
-			exit;
-		}
-
+		include 'conexion.php';
+		
 		$sql = "SELECT * FROM Producto";
 
 		if (!$resultado = $mysqli->query($sql)) {
@@ -24,9 +17,9 @@
 		}
 
 		while($producto = $resultado->fetch_assoc()) { ?>
-		<div class="row">
+		<div class="row col-sm-8 col-sm-offset-2 caja">
 			<div class="col-sm-2">
-				<img class="img-thumbnail" src="productos/<?= $producto['Imagen'] ?>">
+				<img class="img-circle" src="productos/<?= $producto['Imagen'] ?>">
 			</div>
 			<div class="col-sm-8">
 				<h3><strong>Nombre:</strong> <?= $producto['Nombre'] ?></h3>
