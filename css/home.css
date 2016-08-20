@@ -1,0 +1,23 @@
+#moduloHome .img-circle.bebida {
+	max-height: 200px;
+	border: 3px solid rgba(0,0,0,0.3);
+}
+
+#moduloHome .enlinea {
+	display: inline-block;
+}
+
+#moduloHome p.enlinea {
+	padding-top: 30px;
+}
+
+#moduloHome .caja {
+	padding: 20px;
+	margin-top: 20px;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 30px;
+}
+
+#moduloHome .centrado {
+	text-align: center;
+}

@@ -1,0 +1,15 @@
+#moduloEdad #btnEnviar {
+	margin-top: 10px;
+}
+
+#moduloEdad #cntBtnEnviar {
+	text-align: center;
+}
+
+#moduloEdad.centrado {
+	text-align: center;
+}
+
+#moduloEdad .espacio {
+	padding-top: 20px;
+}
