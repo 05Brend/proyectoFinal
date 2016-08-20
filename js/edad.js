@@ -39,7 +39,7 @@ function validarEdad(dia, mes, anio) {
 	if (edad < 18) {
 		alert("Sólo pueden acceder mayores de edad");
 	} else {
-		localStorage.saltarEdad = "Y";
+		sessionStorage.saltarEdad = "Y";
 		window.location = "index.php";
 	}
 }
