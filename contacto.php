@@ -34,7 +34,7 @@
 				Correo Electrónico:
 			</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" name="correo" required/>
+				<input type="email" class="form-control" name="correo" required/>
 			</div>
 		</div>
 

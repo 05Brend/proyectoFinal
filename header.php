@@ -4,6 +4,7 @@
 		<title><?= $titulo ?></title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="componentes/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/general.css">
 		<link rel="stylesheet" href="css/edad.css">
 		<link rel="stylesheet" href="css/home.css">
 		<link rel="stylesheet" href="css/productos.css">
