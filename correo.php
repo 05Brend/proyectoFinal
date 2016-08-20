@@ -8,6 +8,7 @@
 		$telefono = "S/N";
 	}
 
+	include 'componentes/phpmailer/PHPMailerAutoload.php';
 	include 'conexion.php';
 
 	$sql = "INSERT INTO Contacto VALUES (0, '$nombre', '$correo', '$telefono', '$mensaje')";
@@ -18,6 +19,23 @@
 		$huboExito = true;
 	else
 		$huboError = true;
+
+	if ($huboExito) {
+		$mail = new PHPMailer();
+	    $mail->SMTPSecure = 'tls';
+	    $mail->Username = "aqui va tu correo de hotmail";
+	    $mail->Password = "aqui va la contraseña de tu correo de hotmail";
+	    $mail->AddAddress("aqui va el correo destino, aquien se lo vas a mandar?");
+	    $mail->FromName = "Contacto LiQBeER";
+	    $mail->Subject = "Contacto";
+	    $mail->Body = "El usuario $nombre te ha contactado con correo '$correo' y número '$telefono' dejando el siguiente mensaje: $mensaje";
+	    $mail->Host = "smtp.live.com";
+	    $mail->Port = 587;
+	    $mail->IsSMTP();
+	    $mail->SMTPAuth = true;
+	    $mail->From = $mail->Username;
+	    $mail->Send();
+	}
 
 	include 'contacto.php';
 ?>
